@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #0880a8;
 }
 
 .App-logo {
@@ -14,14 +15,31 @@
 }
 
 .App-header {
-  background-color: #DE7E5D;
+  background-color: #0880a8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(13px + 2vmin);
   color: white;
+}
+
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../src/images/studentGroup.jpg') !important;
+  border-radius: 0px;
+  background-position: 50% 50% !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  filter: blur(4px);
+  z-index: -1;
 }
 
 .App-link {
@@ -59,10 +77,118 @@
 }
 
 .brand-logo img {
-  max-width: 50px; /* You can adjust the value as needed */
-  max-height: 50px; /* You can adjust the value as needed */
+  max-width: 50px;
+  max-height: 50px; 
 }
 
 h1 {
   font-size: 4em;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  place-items: center;
+}
+
+.Grid.Column {
+  padding: 16px; /* Add padding to the columns */
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+}
+
+/* Add hover effect for better user interaction */
+.Grid.Column:hover {
+  background-color: #f0f0f0;
+}
+
+.brand-logo {
+  padding: 15px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--accent-1) !important;
+}
+
+.background {
+  background: url('../src/images/studentGroup.jpg') !important;
+  border-radius: 0px;
+  background-position: 50% 50% !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  filter: blur(8px);
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.overlay-blur {
+  position: relative;
+  z-index: 1; /* content above background blurred bc of z-index */
+}
+
+.overlay-blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-overlay);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.overlay-blur::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0880a8;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.menu-background {
+  background-color: #075873;
+}
+
+
+/* App.css */
+/* ... existing styles ... */
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 2.5em; /* Adjust font size for the brand logo */
+  margin-bottom: 15px; /* Add margin to separate from the text */
+  color: white; /* Set font color */
+}
+
+.home-text {
+  font-size: 1.2em;
+  color: white;
+  text-align: center;
 }

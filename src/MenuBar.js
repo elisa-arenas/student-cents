@@ -21,11 +21,11 @@ function MenuBar() {
   ];
 
   return (
-    <Menu inverted style={{ backgroundColor: "#FFFFFF" }}>
+    <Menu className="menu-background">
     <Container style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <Menu.Item className="brand-logo" as={Link} to="/">
+        {/* <Menu.Item className="brand-logo" as={Link} to="/">
           <img src={logo} alt="" />
-        </Menu.Item>
+        </Menu.Item> */}
         <div style={{ display: "flex", gap: "1px"}}>
         {tabs.map((tab) => (
           <Menu.Item
@@ -38,10 +38,11 @@ function MenuBar() {
                      flex: 0.5, 
                      textAlign: "center",
                      padding: "20px",
-                     backgroundColor: activeTab === tab.name ? "#FFFFFF" : "#FFFFFF",
-                     //border: "3px solid #DE7E5D",
-                     fontFamily: "sans-serif", 
+                     backgroundColor: activeTab === tab.name ? "#0880a8" : "#075873",
+                     fontFamily: "sans-serif",
                      borderBottom: "none",
+                     textDecoration: "none",
+                     color: "#ffffff",
                    }}
           >
             {tab.label}
