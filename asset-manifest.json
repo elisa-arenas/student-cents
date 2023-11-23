@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/student-cents/static/css/main.54506edd.css",
-    "main.js": "/student-cents/static/js/main.f3dccd61.js",
+    "main.css": "/student-cents/static/css/main.a27b6e08.css",
+    "main.js": "/student-cents/static/js/main.00ce9589.js",
     "static/js/787.2db53dfd.chunk.js": "/student-cents/static/js/787.2db53dfd.chunk.js",
     "static/media/bofa.png": "/student-cents/static/media/bofa.72a7092d1c6362d4c459.png",
     "static/media/studentGroup.jpg": "/student-cents/static/media/studentGroup.7ae646bc5b37ebad091d.jpg",
@@ -9,12 +9,12 @@
     "static/media/logoWhite.png": "/student-cents/static/media/logoWhite.c7f155c4ccdb310c7ea5.png",
     "static/media/logoDarkBlue.jpg": "/student-cents/static/media/logoDarkBlue.1118acfe1709a6e87d50.jpg",
     "index.html": "/student-cents/index.html",
-    "main.54506edd.css.map": "/student-cents/static/css/main.54506edd.css.map",
-    "main.f3dccd61.js.map": "/student-cents/static/js/main.f3dccd61.js.map",
+    "main.a27b6e08.css.map": "/student-cents/static/css/main.a27b6e08.css.map",
+    "main.00ce9589.js.map": "/student-cents/static/js/main.00ce9589.js.map",
     "787.2db53dfd.chunk.js.map": "/student-cents/static/js/787.2db53dfd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54506edd.css",
-    "static/js/main.f3dccd61.js"
+    "static/css/main.a27b6e08.css",
+    "static/js/main.00ce9589.js"
   ]
 }
