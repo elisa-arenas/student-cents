@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-const logo = "https://th.bing.com/th/id/OIP.wmLy5qlrl49ZmNBK9C71cgHaHa?pid=ImgDet&rs=1";
+const logo = require('../src/images/logoDarkBlue.jpg')
 function MenuBar() {
   const [activeTab, setActiveTab] = useState("home");
 
@@ -14,18 +14,19 @@ function MenuBar() {
     { name: "home", label: "Home", to: "/" },
     { name: "scholarships", label: "Scholarships", to: "/Scholarships" },
     { name: "fafsa", label: "FAFSA", to: "/FAFSA" },
-    { name: "costOfLiving", label: "Cost of Living", to: "/CostOfLiving" },
     { name: "creditCards", label: "Credit Cards", to: "/CreditCards" },
-    { name: "budgetCalculator", label: "Budget Calculator", to: "/BudgetCalculator" },
-    { name: "resources", label: "Resources", to: "/Resources" },
+    // { name: "costOfLiving", label: "Cost of Living", to: "/CostOfLiving" },
+    // { name: "creditCards", label: "Credit Cards", to: "/CreditCards" },
+    // { name: "budgetCalculator", label: "Budget Calculator", to: "/BudgetCalculator" },
+    // { name: "resources", label: "Resources", to: "/Resources" },
   ];
 
   return (
     <Menu className="menu-background">
     <Container style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        {/* <Menu.Item className="brand-logo" as={Link} to="/">
-          <img src={logo} alt="" />
-        </Menu.Item> */}
+        <Menu.Item className="brand-logo" as={Link} to="/">
+          <img src={logo} alt="" style={{ width: '150%', height: '150%' }}  />
+        </Menu.Item>
         <div style={{ display: "flex", gap: "1px"}}>
         {tabs.map((tab) => (
           <Menu.Item

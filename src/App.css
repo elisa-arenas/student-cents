@@ -1,11 +1,21 @@
 .App {
   text-align: center;
   background-color: #0880a8;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0880a8;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -88,7 +98,15 @@ h1 {
 .Grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 9px;
+  place-items: center;
+  margin-top: 1pc;
+}
+
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
   place-items: center;
 }
 
@@ -169,10 +187,6 @@ h1 {
   background-color: #075873;
 }
 
-
-/* App.css */
-/* ... existing styles ... */
-
 .centered-content {
   display: flex;
   flex-direction: column;
@@ -183,12 +197,62 @@ h1 {
 
 .title {
   font-size: 2.5em; /* Adjust font size for the brand logo */
-  margin-bottom: 15px; /* Add margin to separate from the text */
+  margin-bottom: 10px; /* Add margin to separate from the text */
+  margin-top: 100px;
   color: white; /* Set font color */
 }
 
 .home-text {
-  font-size: 1.2em;
+  /* position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   color: white;
   text-align: center;
+  font-size: 1.2em;
+  /* line-height: 1.5;
+  max-width: 800px;
+  margin-top: 20px; */
+}
+
+.home-text p {
+  margin-bottom: 15px;
+}
+
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  place-items: center;
+}
+
+.scholarship-column {
+  flex: 1;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+}
+
+.scholarship-column:hover {
+  background-color: #075873;
+}
+
+.scholarship-container {
+  flex: 1;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+}
+
+.cc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  place-items: center;
 }

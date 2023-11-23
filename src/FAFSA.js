@@ -1,34 +1,117 @@
 // FAFSA.js
-import React from "react";
-import { Card, Container, Grid, Image, Divider, Icon, Button } from "semantic-ui-react";
+import React, { useState } from "react";
+import {Container, Grid, Button} from "semantic-ui-react";
 
 const tempImage = "https://i.pinimg.com/736x/26/76/3d/26763d481172f5dc599d151570b38ded--pixel-art-perler-beads.jpg"
+const FAFSAImage = "https://bestcollegeaid.com/public/filez/wp-content/uploads/2020/01/FAFSA-LOGO.png"
+
+function DropdownOption({ title, content, isOpen, onClick }) {
+  return (
+    <div>
+      <h2 onClick={onClick}>
+        {isOpen ? '▼' : '►'} {title}
+      </h2>
+      {isOpen && (
+        <p>{content}</p>
+      )}
+    </div>
+  );
+}
+
 
 function FAFSA() {
+  const [showGrants, setShowGrants] = useState(false);
+  const [showLoans, setShowLoans] = useState(false);
+  const [showWorkStudy, setShowWorkStudy] = useState(false);
+
+  const handleDropdownClick = (option) => {
+    if (option === "Grants") {
+      setShowGrants(!showGrants);
+      setShowLoans(false);
+      setShowWorkStudy(false);
+    } else if (option === "Loans") {
+      setShowLoans(!showLoans);
+      setShowGrants(false);
+      setShowWorkStudy(false);
+    } else if (option === "WorkStudy") {
+      setShowWorkStudy(!showWorkStudy);
+      setShowGrants(false);
+      setShowLoans(false);
+    }
+  };
+  
   return (
-    <div className="App">
-          <Container>
-            <h1>FAFSA</h1>
-          </Container>
-      <div>
-        <br/>
-          <b>Text here! probs make bigger</b>
-          <Container>
-            <Grid divided centered className="Grid">
-              <Grid.Column width={5}>
-                  <h6>Purpose</h6>
-                  <Image src={tempImage} as="a" size="medium" target="_blank"/>
-                  <Divider/>
+    <div className="App body html">
+      <h1 style={{ marginBottom: "0" }}>FAFSA</h1>
+          <Container style={{ maxWidth: "1200px", display: "flex", marginTop: "5px"}}>
+            <Grid divided centered stackable className="Grid">
+            <div style={{ display: "flex", width: "95%" }}>
+              <Grid.Column width={5} style={{ marginRight: "30px" }}>
+                <Button as='a' href='https://www.uopeople.edu/blog/what-is-fafsa/?utm_source=google&utm_medium=cpc&utm_campaign=ggl-display_pmax_us&utm_term=%7badid%7d&utm_content=&gad_source=1&gclid=Cj0KCQiA6vaqBhCbARIsACF9M6kmlji_-ed5GoJWGdPDES0IkE1Za6Axd-26CW52Fb6aPCTc4_wmOKkaAsH-EALw_wcB' target="_blank">
+                  <h2>What is<img src={FAFSAImage} alt="FAFSA" style={{ width: '200px', height: 'auto', verticalAlign: 'middle' }} />?</h2>
+                </Button>
+                  <b>FAFSA is a form that assesses your financial needs which provides insight on your Estimated Family 
+                    Contribution and offers a couple different funding options.</b>
+                  <hr style={{ borderTop: '1px solid #ddd' }} />
+
+                <Button as='a' href='https://studentaid.gov/apply-for-aid/fafsa/filling-out' target="_blank">
+                  <h2>How to fill it out!</h2>
+                </Button>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/9apxxQrx-WY"
+                  title="FAFSA Tutorial"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+
+                <hr style={{ borderTop: '1px solid #ddd' }} />
+                <Button as='a' href='https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines' target="_blank">
+                  <h2>When to do it?</h2>
+                </Button>
+                <b>For the 2023-2024 Academic Year, the FAFSA form must be submitted by 11:59 p.m. CT on June 30, 2024.</b>
+
               </Grid.Column>
               <Grid.Column width={5}>
-                  <h6>Why</h6>
-                  <Image src={tempImage} as="a" target="_blank" size="medium" />
-                  <Divider/>
-                  <Button>This is how to make a button</Button>
+                <Button as='a' href='https://studentaid.gov/understand-aid/types' target="_blank">
+                  <h2>Types of Aid</h2>
+                </Button>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/Pn4OECMTh5w"
+                  title="Types of Aid"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                 <hr style={{ borderTop: '1px solid #ddd' }} />
+                 <DropdownOption
+                title="Grants"
+                content="Grants are a form of financial aid that do not need to be repaid."
+                isOpen={showGrants}
+                onClick={() => handleDropdownClick("Grants")}
+              />
+
+              <DropdownOption
+                title="Loans"
+                content="Loans are money you borrow but must be paid back with interest."
+                isOpen={showLoans}
+                onClick={() => handleDropdownClick("Loans")}
+              />
+
+              <DropdownOption
+                title="Work-Study"
+                content="The Work-Study program allows students to work part-time based on the level of their financial need."
+                isOpen={showWorkStudy}
+                onClick={() => handleDropdownClick("WorkStudy")}
+              />
               </Grid.Column>
+            </div>
             </Grid>
           </Container>
-        </div>
     </div>
   );
 }
