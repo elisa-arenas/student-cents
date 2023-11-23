@@ -1,20 +1,20 @@
 // Scholarships.js 
 import React from "react";
-import { Card, Container, Grid, Image, Divider, Icon, Button, List } from "semantic-ui-react";
+import {Container, Grid, Divider, Button, List } from "semantic-ui-react";
 
 const tempImage = "https://th.bing.com/th/id/OIP.wmLy5qlrl49ZmNBK9C71cgHaHa?pid=ImgDet&rs=1";
 
 function Scholarships() {
   return (
   <div className="App body html">
-    <Container style={{ maxWidth: "1200px" }}>
+    <Container style={{ maxWidth: "1200px"}}>
       <h1>Scholarships</h1>
-      <Grid stackable columns={2} divided centered className="scholarship-grid">
+      <Grid stackable columns={4} centered doubling className="scholarship-grid">
         <Grid.Column className="scholarship-column scholarship-container">
           <h2>Merit-based scholarships</h2>
           <p>For students with high academic achievment.</p>
             <Divider/>
-            <List style={{ fontSize: "1m" }}>
+            <List >
               <List.Item>
                 <Button as='a' href='https://www.nationalmerit.org/s/1758/interior.aspx?sid=1758&gid=2&pgid=1879' target="_blank">
                   National Merit Scholarship Program
@@ -50,7 +50,7 @@ function Scholarships() {
         <Grid.Column className="scholarship-column scholarship-container">
           <h2>First generation scholarships</h2>
           <p>For students who are the first in their family to attend college.</p>
-          <List style={{ fontSize: "1m" }}>
+          <List>
               <List.Item>
                 <Button as='a' href='https://scholarships360.org/scholarships/first-generation-college-student-scholarships/' target="_blank">
                   Scholarships360 Search Engine
@@ -71,7 +71,7 @@ function Scholarships() {
         <Grid.Column className="scholarship-column scholarship-container">
           <h2>International student scholarships</h2>
           <p>For students who are not U.S. citizens.</p>
-          <List style={{ fontSize: "1m" }}>
+          <List>
               <List.Item>
                 <Button as='a' href='https://www.mpowerfinancing.com/scholarships/global-citizen' target="_blank">
                   Global Citizen Scholarship
@@ -97,7 +97,7 @@ function Scholarships() {
         <Grid.Column className="scholarship-column scholarship-container">
           <h2>Need-based scholarships</h2>
           <p>For students coming from a low-income household.</p>
-           <List style={{ fontSize: "1m" }}>
+           <List>
               <List.Item>
                 <Button as='a' href='https://www.thegatesscholarship.org/scholarship' target="_blank">
                   The Gates Scholarship

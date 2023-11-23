@@ -39,18 +39,3 @@ function CreditCards() {
 }
 
 export default CreditCards;
-
-
-{/* <Grid divided centered className="Grid">
-        <Grid.Column width={5}>
-            <h6>Purpose</h6>
-            <Image src={ccImage} as="a" size="medium" target="_blank"/>
-            <Divider/>
-        </Grid.Column>
-        <Grid.Column width={5}>
-            <h6>Why</h6>
-            <Image src={ccImage} as="a" target="_blank" size="medium" />
-            <Divider/>
-            <Button>This is how to make a button</Button>
-        </Grid.Column>
-      </Grid> */}
