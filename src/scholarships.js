@@ -7,7 +7,8 @@ const tempImage = "https://th.bing.com/th/id/OIP.wmLy5qlrl49ZmNBK9C71cgHaHa?pid=
 function Scholarships() {
   return (
   <div className="App body html">
-    <Container style={{ maxWidth: "1200px"}}>
+     {/* maxWidth: "1200px" */}
+    <Container>
       <h1>Scholarships</h1>
       <Grid stackable columns={4} centered doubling className="scholarship-grid">
         <Grid.Column className="scholarship-column scholarship-container">
@@ -17,7 +18,7 @@ function Scholarships() {
             <List >
               <List.Item>
                 <Button as='a' href='https://www.nationalmerit.org/s/1758/interior.aspx?sid=1758&gid=2&pgid=1879' target="_blank">
-                  National Merit Scholarship Program
+                  National Merit Scholarship
                 </Button>
               </List.Item>
               <List.Item>

@@ -39,7 +39,8 @@ function FAFSA() {
   return (
     <div className="App body html">
       <h1 style={{ marginBottom: "0", padding: "0px" }}>FAFSA</h1>
-      <Container style={{ maxWidth: "1200px", display: "flex", marginTop: "0", paddingTop: "0" }}>
+      {/* style={{ maxWidth: "1200px", display: "flex", marginTop: "0", paddingTop: "0" }} */}
+      <Container>
         <Grid divided centered stackable className="Grid" style={{ margin: "0", paddingTop: "0" }}>
           <Grid.Row columns={2} style={{ padding: "0 8px" }}>
             <Grid.Column style={{ padding: "0 8px" }}>
