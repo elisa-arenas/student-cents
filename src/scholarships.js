@@ -6,7 +6,7 @@ const tempImage = "https://th.bing.com/th/id/OIP.wmLy5qlrl49ZmNBK9C71cgHaHa?pid=
 
 function Scholarships() {
   return (
-  <div className="App body html">
+  <div className="App">
      {/* maxWidth: "1200px" */}
     <Container>
       <h1>Scholarships</h1>

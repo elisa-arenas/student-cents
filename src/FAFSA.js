@@ -37,7 +37,7 @@ function FAFSA() {
   };
 
   return (
-    <div className="App body html">
+    <div className="App">
       <h1 style={{ marginBottom: "0", padding: "0px" }}>FAFSA</h1>
       {/* style={{ maxWidth: "1200px", display: "flex", marginTop: "0", paddingTop: "0" }} */}
       <Container>
